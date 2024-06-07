@@ -15,5 +15,6 @@ android {
 }
 
 dependencies {
+    implementation(project(":Features:Home"))
     implementation(libs.androidx.activity.compose)
 }
