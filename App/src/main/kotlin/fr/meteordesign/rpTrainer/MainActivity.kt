@@ -6,18 +6,23 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
-import fr.meteordesign.features.home.navigation.HomeDestination
-import fr.meteordesign.features.home.navigation.homeComposable
+import fr.meteordesign.features.home.navigation.HomeNavigator
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var homeNavigator: HomeNavigator
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             val navController = rememberNavController()
-            NavHost(navController = navController, startDestination = HomeDestination) {
-                homeComposable()
+            NavHost(navController = navController, startDestination = homeNavigator.route) {
+                with(homeNavigator) {
+                    buildHomeComposable()
+                }
             }
         }
     }
