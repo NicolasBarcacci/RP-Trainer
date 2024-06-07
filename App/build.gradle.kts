@@ -16,5 +16,7 @@ android {
 
 dependencies {
     implementation(project(":Features:Home"))
+    implementation(project(":Domain:External"))
+    implementation(project(":Domain:Internal"))
     implementation(libs.androidx.activity.compose)
 }

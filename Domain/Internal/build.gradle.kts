@@ -1,14 +1,12 @@
 plugins {
     id("RpLibrary")
     id("RpHilt")
-    id("RpCompose")
 }
 
 android {
-    namespace = "fr.meteordesign.features.home"
+    namespace = "fr.meteordesign.domain.internal"
 }
 
 dependencies {
     implementation(project(":Domain:External"))
-    implementation(libs.androidx.hilt.compose)
 }
