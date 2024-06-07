@@ -10,5 +10,6 @@ android {
 
 dependencies {
     implementation(project(":Domain:External"))
+    implementation(project(":Pratik"))
     implementation(libs.androidx.hilt.compose)
 }
