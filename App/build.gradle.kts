@@ -15,5 +15,18 @@ android {
 }
 
 dependencies {
+    // Features
+    implementation(project(":Features:Home"))
+    // Data
+    implementation(project(":Data:Core"))
+    implementation(project(":Data:Dictionary"))
+    // Domain
+    implementation(project(":Domain:External"))
+    implementation(project(":Domain:Internal"))
+    // Libraries
+    implementation(project(":Libraries:Logger"))
+    // Misc
+    implementation(project(":Pratik"))
+
     implementation(libs.androidx.activity.compose)
 }
