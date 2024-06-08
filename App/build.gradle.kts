@@ -23,6 +23,8 @@ dependencies {
     // Domain
     implementation(project(":Domain:External"))
     implementation(project(":Domain:Internal"))
+    // Libraries
+    implementation(project(":Libraries:Logger"))
     // Misc
     implementation(project(":Pratik"))
 
